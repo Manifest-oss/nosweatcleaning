@@ -1,302 +1,999 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No Sweat Cleaning Professionals | Utah's Elite 24/7 Cleaning Service</title>
-    <meta name="description" content="Affordable, fast, and high-efficiency residential & commercial cleaning services across Utah. Backed by our 'No Sweat, Just Clean' Guarantee. Call 385-228-9322.">
-    <meta name="keywords" content="cleaning services utah, commercial cleaning utah, fast residential cleaners salt lake, 24/7 cleaning utah, affordable office cleaning">
-    <meta name="author" content="No Sweat Cleaning Professionals">
-    <meta property="og:title" content="No Sweat Cleaning Professionals | Utah's 24/7 Cleaners">
-    <meta property="og:description" content="Professional, fast, high-efficiency cleaning across Utah. Slogan: 'No Sweat, Just Clean' Guaranteed.">
-    <meta property="og:type" content="website">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap');
-        :root {
-            --brand-red: #dc2626;
-            --brand-red-hover: #b91c1c;
-            --brand-charcoal: #1f2937;
-            --brand-slate: #4b5563;
-            --brand-light-grey: #f3f4f6;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-            background-color: white;
-            color: var(--brand-charcoal);
-        }
-        h1, h2, h3, .brand-font {
-            font-family: 'Montserrat', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: -0.02em;
-        }
-        .hero-section {
-            background: linear-gradient(135deg, #111827 0%, #374151 100%);
-            position: relative;
-        }
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 15v15c0 16.5-12.7 30-30 30S0 46.5 0 30V15L30 0z' fill='%23ffffff' fill-opacity='0.03'/%3E%3C/svg%3E");
-            background-size: 80px 80px;
-        }
-        .btn-red {
-            background-color: var(--brand-red);
-            color: white;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid var(--brand-red);
-        }
-        .btn-red:hover {
-            background-color: transparent;
-            color: var(--brand-red);
-            transform: translateY(-2px);
-        }
-        .btn-outline-white {
-            border: 2px solid rgba(255,255,255,0.3);
-            color: white;
-            transition: all 0.3s ease;
-        }
-        .btn-outline-white:hover {
-            border-color: var(--brand-red);
-            background-color: var(--brand-red);
-        }
-        .service-card {
-            border-bottom: 4px solid #e5e7eb;
-            transition: all 0.4s ease;
-        }
-        .service-card:hover {
-            border-bottom-color: var(--brand-red);
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        .guarantee-badge {
-            background: linear-gradient(to right, var(--brand-charcoal), #111827);
-            border-left: 6px solid var(--brand-red);
-        }
-        .stat-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-    </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>No Sweat Cleaning Professionals | Utah's Elite 24/7 Cleaning Service</title>
+<meta name="description" content="Professional residential & commercial cleaning across Salt Lake Valley, Utah. Power washing, move-in/out, construction cleanup. Call 385-228-9322. No Sweat, Just Clean — Guaranteed."/>
+<meta name="keywords" content="cleaning services utah, commercial cleaning salt lake city, residential cleaning SLC, power washing utah, move out cleaning, construction cleanup utah"/>
+<meta property="og:title" content="No Sweat Cleaning Professionals | Utah's 24/7 Cleaners"/>
+<meta property="og:description" content="Elite residential & commercial cleaning across the Salt Lake Valley. No Sweat, Just Clean — Guaranteed."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--red:#dc2626;--red-dark:#b91c1c;--charcoal:#1f2937;--slate:#4b5563;--black:#111827;--grey:#f3f4f6;--white:#ffffff;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:80px;}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--slate);background:#fff;overflow-x:hidden;}
+h1,h2,h3{font-family:'Montserrat',sans-serif;text-transform:uppercase;letter-spacing:-0.01em;color:var(--charcoal);}
+a{text-decoration:none;color:inherit;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+ul{list-style:none;}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .75s ease,transform .75s ease;}
+.reveal.on{opacity:1;transform:translateY(0);}
+
+/* TOP BAR */
+.topbar{background:var(--red);color:#fff;font-size:10px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;}
+.topbar-in{max-width:1200px;margin:0 auto;padding:7px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.topbar a{color:#fff;}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #e5e7eb;transition:box-shadow .3s;}
+.nav.scrolled{box-shadow:0 4px 20px rgba(0,0,0,.12);}
+.nav-in{max-width:1200px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:11px;}
+.logo-mark{width:42px;height:42px;background:#111827;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.logo-word .top{font-family:'Montserrat';font-weight:900;font-size:18px;color:var(--charcoal);}
+.logo-word .bot{font-size:9px;text-transform:uppercase;letter-spacing:.28em;color:var(--slate);font-weight:600;}
+.nav-links{display:flex;gap:26px;align-items:center;}
+.nav-links a{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--charcoal);position:relative;padding:4px 0;}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--red);transition:width .25s;}
+.nav-links a:hover::after{width:100%;}
+.btn-quote{background:var(--red);color:#fff !important;padding:10px 22px;border-radius:6px;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.06em;transition:.2s;display:inline-block;}
+.btn-quote:hover{background:var(--red-dark);transform:scale(1.03);}
+.btn-quote::after{display:none !important;}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:8px;}
+.hamburger span{display:block;width:24px;height:3px;background:var(--charcoal);border-radius:2px;}
+
+/* MOBILE MENU */
+.mob-menu{position:fixed;inset:0;background:rgba(17,24,39,.97);z-index:2000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;opacity:0;pointer-events:none;transition:opacity .3s;}
+.mob-menu.open{opacity:1;pointer-events:all;}
+.mob-menu a,.mob-link{color:#fff;font-family:'Montserrat';font-weight:800;font-size:26px;text-transform:uppercase;padding:12px;display:block;background:none;border:none;}
+.mob-menu a:hover,.mob-link:hover{color:var(--red);}
+.mob-close{position:absolute;top:22px;right:24px;color:#fff;font-size:34px;line-height:1;}
+
+/* BTN */
+.btn{display:inline-flex;align-items:center;justify-content:center;font-weight:800;text-transform:uppercase;letter-spacing:.07em;font-size:14px;padding:16px 30px;border-radius:8px;overflow:hidden;position:relative;transition:.2s;}
+.btn-primary{background:var(--red);color:#fff;}
+.btn-primary:hover{background:var(--red-dark);transform:scale(1.03);box-shadow:0 12px 30px rgba(220,38,38,.4);}
+.btn-outline{border:2px solid rgba(255,255,255,.7);color:#fff;}
+.btn-outline:hover{background:rgba(255,255,255,.08);transform:scale(1.03);}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0b0f19 0%,#1f2937 50%,#111827 100%);color:#fff;min-height:92vh;display:flex;align-items:center;overflow:hidden;position:relative;}
+.hero-dots{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='2' cy='2' r='1.2' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E");pointer-events:none;}
+.hero-ring{position:absolute;border-radius:50%;border:1px solid rgba(220,38,38,.22);pointer-events:none;}
+.ring-a{width:600px;height:600px;top:-150px;right:-170px;border-width:2px;animation:spinCW 38s linear infinite;}
+.ring-b{width:460px;height:460px;bottom:-200px;left:-150px;animation:spinCCW 50s linear infinite;}
+@keyframes spinCW{to{transform:rotate(360deg);}}
+@keyframes spinCCW{to{transform:rotate(-360deg);}}
+.particles{position:absolute;inset:0;pointer-events:none;}
+.particle{position:absolute;border-radius:50%;animation:floatUp linear infinite;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.8),rgba(255,255,255,.1) 40%,rgba(220,38,38,.2) 70%,transparent);}
+@keyframes floatUp{0%{transform:translateY(0) scale(.9);opacity:0;}10%{opacity:.8;}85%{transform:translateY(-100px) scale(1);opacity:.2;}100%{opacity:0;}}
+.hero-in{max-width:1200px;margin:0 auto;padding:90px 20px;display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;position:relative;z-index:5;width:100%;}
+.hero-badge{display:inline-block;color:var(--red);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.32em;border:1px solid rgba(220,38,38,.5);padding:7px 14px;border-radius:4px;margin-bottom:24px;background:rgba(220,38,38,.08);}
+.hero-h1{font-size:clamp(44px,7vw,88px);font-weight:900;line-height:.95;color:#fff;text-shadow:1px 1px 0 #0b0f19,3px 3px 0 #0b0f19,6px 6px 0 #0b0f19,9px 9px 0 #0b0f19,12px 12px 22px rgba(0,0,0,.55);}
+.hero-h1 .red{color:var(--red);}
+.hero-sub{margin-top:22px;font-size:clamp(15px,1.6vw,18px);color:#d1d5db;max-width:500px;line-height:1.7;}
+.hero-ctas{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.stat-card{backdrop-filter:blur(10px);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:26px 18px;text-align:center;transition:.3s;}
+.stat-card:hover{border-color:rgba(220,38,38,.55);transform:translateY(-4px);}
+.stat-card .num{font-family:'Montserrat';font-weight:900;font-size:clamp(26px,3.2vw,40px);color:#fff;}
+.stat-card .num em{color:var(--red);font-style:normal;}
+.stat-card .lbl{margin-top:5px;font-size:10.5px;text-transform:uppercase;letter-spacing:.22em;color:#9ca3af;font-weight:600;}
+
+/* SECTIONS */
+.sect{padding:90px 20px;}
+.sect-in{max-width:1200px;margin:0 auto;}
+.eyebrow{color:var(--red);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.3em;margin-bottom:14px;}
+.sect-h2{font-size:clamp(28px,4vw,46px);font-weight:900;line-height:1.05;}
+.sect-sub{margin-top:14px;max-width:620px;color:var(--slate);line-height:1.7;}
+
+/* GUARANTEE */
+.guarantee{background:var(--grey);}
+.g-card{background:var(--charcoal);border-left:6px solid var(--red);border-radius:12px;padding:clamp(28px,5vw,54px);display:flex;gap:32px;align-items:center;box-shadow:0 20px 50px rgba(17,24,39,.25);}
+.g-shield{flex-shrink:0;}
+.g-card h3{color:#fff;font-style:italic;font-size:clamp(22px,3.2vw,36px);font-weight:800;text-transform:none;}
+.g-rule{width:70px;height:4px;background:var(--red);margin:16px 0;border-radius:2px;}
+.g-card p{color:#d1d5db;line-height:1.8;font-size:15px;max-width:660px;}
+
+/* SERVICES */
+.tabbar{display:flex;gap:10px;flex-wrap:wrap;margin:38px 0 34px;}
+.tab-btn{padding:12px 22px;border-radius:8px;background:#e5e7eb;color:var(--charcoal);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.05em;transition:.2s;}
+.tab-btn:hover{background:#d1d5db;}
+.tab-btn.active{background:var(--red);color:#fff;box-shadow:0 8px 22px rgba(220,38,38,.3);}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.svc-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:24px;position:relative;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .3s;will-change:transform;}
+.svc-card::after{content:'';position:absolute;left:0;bottom:0;height:4px;width:0;background:var(--red);transition:width .35s;}
+.svc-card:hover::after{width:100%;}
+.svc-card:hover{box-shadow:0 20px 46px rgba(17,24,39,.13);}
+.svc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;}
+.svc-card h3{font-size:16px;font-weight:800;line-height:1.25;}
+.svc-badge{flex-shrink:0;background:rgba(220,38,38,.1);color:var(--red);font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:5px 10px;border-radius:999px;white-space:nowrap;}
+.svc-meta{margin-top:9px;display:flex;gap:12px;font-size:13px;font-weight:700;color:var(--charcoal);}
+.svc-meta .price{color:var(--red);}
+.svc-desc{margin-top:11px;font-size:13.5px;line-height:1.65;flex:1;}
+.svc-toggle{margin-top:13px;color:var(--red);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.06em;text-align:left;}
+.svc-includes{margin-top:12px;border-top:1px dashed #e5e7eb;padding-top:12px;display:none;}
+.svc-includes li{font-size:13px;line-height:1.55;padding:3px 0 3px 20px;position:relative;}
+.svc-includes li::before{content:'✓';position:absolute;left:0;color:var(--red);font-weight:800;}
+.svc-cta{padding-top:16px;margin-top:auto;}
+.svc-cta a{display:inline-block;background:var(--charcoal);color:#fff;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.07em;padding:10px 18px;border-radius:6px;transition:.2s;}
+.svc-cta a:hover{background:var(--red);}
+
+/* COVERAGE */
+.coverage{background:#0b0f19;color:#fff;}
+.cov-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.coverage .sect-h2{color:#fff;}
+.coverage .sect-sub{color:#9ca3af;}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px;}
+.chip{border:1px solid rgba(255,255,255,.18);color:#e5e7eb;font-size:12px;font-weight:600;padding:8px 15px;border-radius:999px;transition:.2s;background:rgba(255,255,255,.03);}
+.chip:hover{border-color:var(--red);color:#fff;background:rgba(220,38,38,.15);transform:translateY(-2px);}
+.sphere-stage{display:flex;align-items:center;justify-content:center;min-height:380px;}
+.sphere-wrap{width:280px;height:280px;position:relative;perspective:800px;}
+.sphere{position:absolute;inset:0;transform-style:preserve-3d;animation:sphereSpin 20s linear infinite;}
+@keyframes sphereSpin{from{transform:rotateX(-12deg) rotateY(0);}to{transform:rotateX(-12deg) rotateY(360deg);}}
+.s-ring{position:absolute;inset:0;border:1px solid rgba(220,38,38,.3);border-radius:50%;}
+.s-core{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,rgba(220,38,38,.3),transparent 65%);}
+.pin{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 10px #dc2626,0 0 20px rgba(220,38,38,.6);animation:pinPulse 2.2s ease-in-out infinite;cursor:pointer;z-index:6;}
+@keyframes pinPulse{0%,100%{transform:scale(1);}50%{transform:scale(1.45);}}
+.pin .tip{position:absolute;bottom:160%;left:50%;transform:translateX(-50%) translateY(6px);background:#111827;border:1px solid rgba(220,38,38,.5);color:#fff;font-size:11px;font-weight:600;padding:7px 11px;border-radius:8px;white-space:nowrap;opacity:0;pointer-events:none;transition:.25s;box-shadow:0 10px 24px rgba(0,0,0,.5);}
+.pin .tip b{display:block;font-family:'Montserrat';letter-spacing:.04em;}
+.pin .tip span{color:#34d399;font-size:10px;}
+.pin:hover .tip{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* WHY US */
+.whyus{background:#fff;}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:44px 0;}
+.stat-big{text-align:center;padding:28px 12px;background:var(--grey);border-radius:12px;border-bottom:4px solid var(--red);}
+.stat-big .n{font-family:'Montserrat';font-weight:900;font-size:clamp(28px,3.8vw,44px);color:var(--charcoal);}
+.stat-big .n em{color:var(--red);font-style:normal;}
+.stat-big .l{margin-top:5px;font-size:11px;text-transform:uppercase;letter-spacing:.16em;font-weight:700;color:var(--slate);}
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.pillar{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:24px;transition:.3s;position:relative;overflow:hidden;}
+.pillar::after{content:'';position:absolute;left:0;bottom:0;height:4px;width:0;background:var(--red);transition:width .35s;}
+.pillar:hover::after{width:100%;}
+.pillar:hover{box-shadow:0 18px 40px rgba(17,24,39,.11);transform:translateY(-4px);}
+.pillar .ico{font-size:28px;}
+.pillar h3{font-size:15px;margin:13px 0 9px;font-weight:800;}
+.pillar p{font-size:13px;line-height:1.65;}
+.owner{margin-top:44px;background:var(--charcoal);border-left:6px solid var(--red);border-radius:12px;padding:clamp(26px,4vw,44px);}
+.owner blockquote{color:#f3f4f6;font-size:clamp(16px,2.1vw,21px);line-height:1.7;font-style:italic;max-width:840px;}
+.owner cite{display:block;margin-top:16px;color:var(--red);font-style:normal;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.18em;}
+
+/* TESTIMONIALS */
+.reviews{background:var(--grey);}
+.t-card{background:#fff;border-radius:14px;padding:clamp(26px,4vw,46px);box-shadow:0 18px 50px rgba(17,24,39,.1);text-align:center;max-width:800px;margin:44px auto 0;}
+.t-stars{color:var(--red);font-size:20px;letter-spacing:4px;}
+.t-quote{margin:18px 0;font-size:clamp(16px,2vw,20px);color:var(--charcoal);line-height:1.7;font-style:italic;}
+.t-who{font-weight:800;color:var(--charcoal);font-size:14px;text-transform:uppercase;letter-spacing:.06em;}
+.t-svc{margin-top:4px;font-size:12px;color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:.1em;}
+.car-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:24px;}
+.dotbar{display:flex;gap:8px;}
+.dot{width:10px;height:10px;border-radius:50%;background:#d1d5db;border:none;cursor:pointer;transition:.25s;}
+.dot.on{background:var(--red);transform:scale(1.3);}
+.arrow{width:40px;height:40px;border-radius:50%;border:1.5px solid #d1d5db;color:var(--charcoal);font-size:18px;display:flex;align-items:center;justify-content:center;transition:.2s;background:#fff;}
+.arrow:hover{border-color:var(--red);color:var(--red);}
+
+/* ESTIMATE */
+.estimate{background:#fff;}
+.calc-card{background:var(--grey);border:1px solid #e5e7eb;border-top:8px solid var(--red);border-radius:12px;padding:clamp(24px,4vw,42px);max-width:620px;margin:42px auto 0;box-shadow:0 20px 50px rgba(17,24,39,.1);}
+.f-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.field{display:flex;flex-direction:column;gap:6px;}
+.field.full{grid-column:1/-1;}
+.field label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--charcoal);}
+.field label em{color:var(--red);font-style:normal;}
+.field input,.field select,.field textarea{font-family:'Inter';font-size:14.5px;color:var(--charcoal);padding:12px 13px;border:1px solid #d1d5db;border-bottom:2.5px solid #d1d5db;border-radius:8px;background:#fafafa;transition:.25s;width:100%;}
+.field textarea{min-height:100px;resize:vertical;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-bottom-color:var(--red);box-shadow:0 6px 18px rgba(220,38,38,.18);background:#fff;}
+.opt-row{display:flex;align-items:center;gap:11px;background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:12px 13px;cursor:pointer;transition:.2s;font-size:14px;font-weight:600;color:var(--charcoal);}
+.opt-row:hover{border-color:var(--red);}
+.opt-row input{width:17px;height:17px;accent-color:var(--red);cursor:pointer;flex-shrink:0;}
+.opt-row .add{margin-left:auto;color:var(--red);font-weight:800;font-size:12.5px;}
+.calc-total{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--charcoal);border-left:6px solid var(--red);border-radius:10px;padding:16px 18px;}
+.calc-total .lbl{color:#9ca3af;font-size:10.5px;text-transform:uppercase;letter-spacing:.2em;font-weight:700;}
+.calc-total .amt{font-family:'Montserrat';font-weight:900;font-size:clamp(24px,3.6vw,34px);color:#fff;}
+.calc-total .amt em{color:var(--red);font-style:normal;}
+.calc-note{font-size:11.5px;color:var(--slate);text-align:center;line-height:1.6;}
+.submit-btn{width:100%;background:var(--red);color:#fff;font-family:'Montserrat';font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.1em;padding:17px;border-radius:8px;transition:.2s;cursor:pointer;position:relative;overflow:hidden;}
+.submit-btn:hover{background:var(--red-dark);transform:scale(1.015);box-shadow:0 14px 34px rgba(220,38,38,.4);}
+.submit-btn:disabled{opacity:.6;cursor:wait;transform:none;}
+.form-msg{grid-column:1/-1;text-align:center;font-weight:700;font-size:14px;padding:13px;border-radius:8px;}
+.form-msg.ok{background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0;}
+.form-msg.err{background:#fef2f2;color:#991b1b;border:1px solid #fecaca;}
+.form-msg a{text-decoration:underline;font-weight:800;}
+.form-note{font-size:12px;color:var(--slate);text-align:center;}
+
+/* BOOKING */
+.book{background:#111827;}
+.book .eyebrow{color:var(--red);}
+.book .sect-h2{color:#fff;}
+.book .sect-sub{color:#9ca3af;}
+.form-card{background:#fff;border-top:8px solid var(--red);border-radius:12px;padding:clamp(24px,4vw,46px);max-width:860px;margin:42px auto 0;box-shadow:0 30px 70px rgba(0,0,0,.45);}
+
+/* FOOTER */
+.footer{background:#000;color:#fff;padding:44px 20px;}
+.foot-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap;}
+.foot-mid{display:flex;gap:24px;flex-wrap:wrap;font-size:14px;font-weight:600;}
+.foot-mid a:hover{color:var(--red);}
+.foot-right{font-size:11.5px;color:#6b7280;}
+
+/* NOVA CHAT */
+.nova-fab{position:fixed;bottom:22px;right:22px;width:58px;height:58px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(220,38,38,.5);z-index:3000;transition:.2s;cursor:pointer;border:none;}
+.nova-fab:hover{transform:scale(1.08);}
+.nova-fab.pulse{animation:fabPulse 2s ease-in-out infinite;}
+@keyframes fabPulse{0%,100%{box-shadow:0 10px 30px rgba(220,38,38,.5),0 0 0 0 rgba(220,38,38,.4);}50%{box-shadow:0 10px 30px rgba(220,38,38,.5),0 0 0 14px rgba(220,38,38,0);}}
+.nova-badge{position:absolute;top:-3px;right:-3px;width:20px;height:20px;border-radius:50%;background:#fff;color:var(--red);font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;border:2px solid var(--red);}
+.nova-win{position:fixed;bottom:92px;right:22px;width:350px;max-width:calc(100vw - 28px);height:500px;max-height:calc(100vh - 120px);background:#111827;border:1px solid rgba(255,255,255,.12);border-radius:16px;z-index:3000;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 28px 70px rgba(0,0,0,.6);animation:slideUp .35s ease;}
+.nova-win.hidden{display:none;}
+@keyframes slideUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.nova-head{background:#0b0f19;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08);}
+.nova-head .nt{color:#fff;font-family:'Montserrat';font-weight:800;font-size:13.5px;}
+.nova-head .ns{font-size:10.5px;color:#34d399;font-weight:600;margin-top:2px;}
+.nova-head .ns::before{content:'● ';}
+.nova-close-btn{color:#9ca3af;font-size:21px;line-height:1;cursor:pointer;}
+.nova-close-btn:hover{color:#fff;}
+.nova-msgs{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:9px;}
+.nmsg{max-width:85%;padding:10px 13px;border-radius:14px;font-size:13.5px;line-height:1.55;}
+.nmsg.bot{align-self:flex-start;background:#1f2937;color:#e5e7eb;border-bottom-left-radius:4px;}
+.nmsg.user{align-self:flex-end;background:linear-gradient(135deg,#dc2626,#b91c1c);color:#fff;border-bottom-right-radius:4px;}
+.typing-dots{align-self:flex-start;background:#1f2937;border-radius:14px;border-bottom-left-radius:4px;padding:12px 14px;display:flex;gap:4px;}
+.typing-dots span{width:6px;height:6px;border-radius:50%;background:#9ca3af;animation:td 1.1s ease-in-out infinite;display:block;}
+.typing-dots span:nth-child(2){animation-delay:.15s;}
+.typing-dots span:nth-child(3){animation-delay:.3s;}
+@keyframes td{0%,100%{transform:translateY(0);opacity:.5;}50%{transform:translateY(-5px);opacity:1;}}
+.chips-row{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 8px;}
+.qchip{border:1px solid rgba(220,38,38,.5);color:#fca5a5;font-size:11px;font-weight:600;padding:6px 11px;border-radius:999px;transition:.2s;background:rgba(220,38,38,.08);}
+.qchip:hover{background:var(--red);color:#fff;}
+.nova-input-row{display:flex;gap:7px;padding:10px;border-top:1px solid rgba(255,255,255,.08);background:#0b0f19;}
+.nova-input-row input{flex:1;background:#1f2937;border:1px solid rgba(255,255,255,.1);border-radius:9px;color:#fff;font-size:13px;padding:10px 12px;font-family:'Inter';}
+.nova-input-row input:focus{outline:none;border-color:var(--red);}
+.nova-send-btn{background:var(--red);color:#fff;border-radius:9px;padding:0 14px;font-weight:800;font-size:12.5px;transition:.2s;}
+.nova-send-btn:hover{background:var(--red-dark);}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .svc-grid{grid-template-columns:repeat(2,1fr);}
+  .pillars,.stats-row{grid-template-columns:repeat(2,1fr);}
+  .hero-in{grid-template-columns:1fr;gap:44px;}
+  .cov-grid{grid-template-columns:1fr;}
+}
+@media(max-width:640px){
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .svc-grid{grid-template-columns:1fr;}
+  .f-grid{grid-template-columns:1fr;}
+  .g-card{flex-direction:column;text-align:center;align-items:center;}
+  .topbar-in{justify-content:center;}
+  .sect{padding:68px 16px;}
+  .foot-in{justify-content:center;text-align:center;}
+  .ring-a,.ring-b{opacity:.4;}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important;}
+  .reveal{opacity:1;transform:none;}
+}
+</style>
 </head>
 <body>
-    <div class="bg-red-600 text-white py-2.5 px-4 text-center sm:text-left">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-[10px] font-black uppercase tracking-[0.2em] gap-2">
-            <div class="flex items-center gap-4">
-                <span><i class="fas fa-bolt mr-2 animate-pulse"></i> High-Efficiency Cleaning</span>
-                <span class="hidden md:inline"><i class="fas fa-shield-alt mr-2"></i> Utah Licensed & Insured</span>
-            </div>
-            <a href="tel:3852289322" class="hover:underline flex items-center gap-1">
-                <i class="fas fa-phone-alt"></i> Direct Dispatch: 385-228-9322
-            </a>
-        </div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-in">
+    <div>⚡ High-Efficiency Cleaning &nbsp;·&nbsp; 🛡 Utah Licensed &amp; Insured</div>
+    <a href="tel:3852289322">📞 Direct Dispatch: 385-228-9322</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <div class="nav-in">
+    <a href="#home" class="logo">
+      <span class="logo-mark">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 5.5V11c0 5.2 3.4 9.4 8 11 4.6-1.6 8-5.8 8-11V5.5L12 2z" fill="#dc2626"/><path d="M9 12l2.2 2.2L15.5 9.7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="logo-word"><div class="top">NO SWEAT</div><div class="bot">Cleaning Professionals</div></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Capabilities</a>
+      <a href="#guarantee">Our Oath</a>
+      <a href="#coverage">Coverage</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#book" class="btn-quote">Get Quote</a>
     </div>
-    <nav class="bg-white sticky top-0 z-50 shadow-sm border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <a href="#" class="flex items-center gap-4">
-                    <div class="w-12 h-12 bg-gray-900 flex items-center justify-center rounded-sm">
-                        <i class="fas fa-shield-alt text-red-600 text-2xl"></i>
-                    </div>
-                    <div>
-                        <div class="text-xl font-black text-gray-900 leading-none tracking-tight">NO SWEAT</div>
-                        <div class="text-[8px] font-bold text-gray-400 tracking-[0.4em] uppercase">Cleaning Professionals</div>
-                    </div>
-                </a>
-                <div class="hidden lg:flex items-center gap-10 font-bold text-gray-900 text-xs uppercase tracking-widest">
-                    <a href="#services" class="hover:text-red-600 transition">Capabilities</a>
-                    <a href="#guarantee" class="hover:text-red-600 transition">Our Oath</a>
-                    <a href="mailto:sweatjasmine125@gmail.com" class="hover:text-red-600 transition lowercase font-medium">sweatjasmine125@gmail.com</a>
-                    <a href="#book" class="btn-red px-6 py-3 rounded-sm text-[10px]">Get Quote</a>
-                </div>
-                <div class="lg:hidden">
-                    <a href="tel:3852289322" class="bg-red-600 text-white px-4 py-2 rounded font-bold text-xs flex items-center gap-2">
-                        <i class="fas fa-phone-alt"></i> CALL NOW
-                    </a>
-                </div>
+    <button class="hamburger" id="hamBtn"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" id="mobClose">×</button>
+  <a href="#services" class="mob-link" onclick="closeMob()">Capabilities</a>
+  <a href="#guarantee" class="mob-link" onclick="closeMob()">Our Oath</a>
+  <a href="#coverage" class="mob-link" onclick="closeMob()">Coverage</a>
+  <a href="#reviews" class="mob-link" onclick="closeMob()">Reviews</a>
+  <a href="#book" class="mob-link" style="color:#dc2626" onclick="closeMob()">Get a Free Quote</a>
+  <a href="tel:3852289322" class="mob-link" onclick="closeMob()">📞 385-228-9322</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home" id="heroSection">
+  <div class="hero-dots" id="heroDots"></div>
+  <div class="hero-ring ring-a" id="ringA"></div>
+  <div class="hero-ring ring-b" id="ringB"></div>
+  <div class="particles" id="particles"></div>
+  <div class="hero-in">
+    <div>
+      <span class="hero-badge">Utah Statewide · 24/7/365</span>
+      <h1 class="hero-h1">Elite<br/><span class="red">Response</span><br/>Cleaning.</h1>
+      <p class="hero-sub">High-efficiency maintenance for Utah's most demanding spaces. Affordable, rapid-deployment professional cleaning — right when you need them.</p>
+      <div class="hero-ctas">
+        <a href="#book" class="btn btn-primary">Deploy Team Now</a>
+        <a href="tel:3852289322" class="btn btn-outline">Call 385-228-9322</a>
+      </div>
+    </div>
+    <div class="hero-stats" id="heroStats">
+      <div class="stat-card"><div class="num">24<em>/7</em></div><div class="lbl">Availability</div></div>
+      <div class="stat-card"><div class="num">365</div><div class="lbl">Days A Year</div></div>
+      <div class="stat-card"><div class="num">100<em>%</em></div><div class="lbl">Guaranteed</div></div>
+      <div class="stat-card"><div class="num"><em>UT</em></div><div class="lbl">Statewide</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="sect guarantee" id="guarantee">
+  <div class="sect-in">
+    <div class="g-card reveal">
+      <div class="g-shield">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 5.5V11c0 5.2 3.4 9.4 8 11 4.6-1.6 8-5.8 8-11V5.5L12 2z" fill="#dc2626"/><path d="M9 12l2.2 2.2L15.5 9.7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div>
+        <h3>"No Sweat, Just Clean"</h3>
+        <div class="g-rule"></div>
+        <p>Our standard is perfection. We deliver high-efficiency cleaning that eliminates the stress of maintenance. If you aren't completely satisfied, we return immediately to make it right — no questions asked.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sect" id="services">
+  <div class="sect-in">
+    <div class="reveal">
+      <div class="eyebrow">Full-Spectrum Capabilities</div>
+      <h2 class="sect-h2">Every Mess. <span style="color:#dc2626">Handled.</span></h2>
+      <p class="sect-sub">Four divisions, twenty-three services, one standard. From a weekly home reset to a full construction handover.</p>
+    </div>
+    <div class="tabbar reveal">
+      <button class="tab-btn active" onclick="switchTab('Residential',this)">🏠 Residential</button>
+      <button class="tab-btn" onclick="switchTab('Commercial',this)">🏢 Commercial</button>
+      <button class="tab-btn" onclick="switchTab('Power Washing',this)">💦 Power Washing</button>
+      <button class="tab-btn" onclick="switchTab('Specialty',this)">⭐ Specialty</button>
+    </div>
+    <div class="svc-grid" id="svcGrid"></div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section class="sect coverage" id="coverage">
+  <div class="sect-in">
+    <div class="cov-grid">
+      <div class="reveal">
+        <div class="eyebrow">Our Reach</div>
+        <h2 class="sect-h2">One Valley.<br/><span style="color:#dc2626">Total Coverage.</span></h2>
+        <p class="sect-sub">Headquartered in the Salt Lake Valley, our teams dispatch across the Wasatch Front — same-week scheduling, after-hours availability, rapid response.</p>
+        <div class="chips" id="cityChips"></div>
+      </div>
+      <div class="reveal">
+        <div class="sphere-stage">
+          <div class="sphere-wrap">
+            <div class="sphere" id="sphere">
+              <div class="s-core"></div>
+              <div class="s-ring"></div>
+              <div class="s-ring" style="transform:rotateY(22.5deg)"></div>
+              <div class="s-ring" style="transform:rotateY(45deg)"></div>
+              <div class="s-ring" style="transform:rotateY(67.5deg)"></div>
+              <div class="s-ring" style="transform:rotateY(90deg)"></div>
+              <div class="s-ring" style="transform:rotateX(30deg)"></div>
+              <div class="s-ring" style="transform:rotateX(60deg)"></div>
+              <div class="s-ring" style="transform:rotateX(90deg)"></div>
             </div>
+            <!-- Location pins -->
+            <div class="pin" style="top:18%;left:48%"><div class="tip"><b>Salt Lake City</b><span>✓ Active Service Area</span></div></div>
+            <div class="pin" style="top:62%;left:38%"><div class="tip"><b>South Jordan</b><span>✓ Active Service Area</span></div></div>
+            <div class="pin" style="top:50%;left:26%"><div class="tip"><b>West Jordan</b><span>✓ Active Service Area</span></div></div>
+            <div class="pin" style="top:58%;left:66%"><div class="tip"><b>Sandy</b><span>✓ Active Service Area</span></div></div>
+            <div class="pin" style="top:38%;left:58%"><div class="tip"><b>Murray</b><span>✓ Active Service Area</span></div></div>
+            <div class="pin" style="top:74%;left:46%"><div class="tip"><b>Riverton</b><span>✓ Active Service Area</span></div></div>
+            <div class="pin" style="top:70%;left:70%"><div class="tip"><b>Draper</b><span>✓ Active Service Area</span></div></div>
+            <div class="pin" style="top:80%;left:24%"><div class="tip"><b>Herriman</b><span>✓ Active Service Area</span></div></div>
+          </div>
         </div>
-    </nav>
-    <section class="hero-section py-20 lg:py-44 text-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <span class="inline-block bg-red-600 text-white text-[10px] font-extrabold tracking-widest uppercase px-3 py-1 mb-6 rounded-sm">
-                        UTAH STATEWIDE • 24/7/365
-                    </span>
-                    <h1 class="text-5xl md:text-8xl font-black mb-6 leading-none tracking-tight">
-                        Elite <br><span class="text-red-600">Response</span> <br>Cleaning.
-                    </h1>
-                    <p class="text-lg text-gray-300 mb-10 font-medium leading-relaxed max-w-lg">
-                        High-efficiency maintenance for Utah's most demanding spaces. We provide affordable, rapid-deployment professional cleaning services right when you need them.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#book" class="btn-red px-10 py-5 rounded-sm font-black text-center text-sm uppercase tracking-widest shadow-2xl">
-                            Deploy Team Now
-                        </a>
-                        <a href="tel:3852289322" class="btn-outline-white px-10 py-5 rounded-sm font-black text-center text-sm uppercase tracking-widest">
-                            Call 385-228-9322
-                        </a>
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="stat-card p-6 md:p-8 text-center rounded-sm">
-                        <div class="text-red-500 text-3xl md:text-4xl font-black mb-1">24/7</div>
-                        <div class="text-[9px] md:text-[10px] uppercase font-bold tracking-widest text-gray-400">Availability</div>
-                    </div>
-                    <div class="stat-card p-6 md:p-8 text-center rounded-sm">
-                        <div class="text-red-500 text-3xl md:text-4xl font-black mb-1">365</div>
-                        <div class="text-[9px] md:text-[10px] uppercase font-bold tracking-widest text-gray-400">Days A Year</div>
-                    </div>
-                    <div class="stat-card p-6 md:p-8 text-center rounded-sm">
-                        <div class="text-red-500 text-3xl md:text-4xl font-black mb-1">100%</div>
-                        <div class="text-[9px] md:text-[10px] uppercase font-bold tracking-widest text-gray-400">Guaranteed</div>
-                    </div>
-                    <div class="stat-card p-6 md:p-8 text-center rounded-sm">
-                        <div class="text-red-500 text-3xl md:text-4xl font-black mb-1">UT</div>
-                        <div class="text-[9px] md:text-[10px] uppercase font-bold tracking-widest text-gray-400">Statewide</div>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="sect whyus" id="whyus">
+  <div class="sect-in">
+    <div class="reveal">
+      <div class="eyebrow">Why No Sweat</div>
+      <h2 class="sect-h2">Built On Trust.<br/><span style="color:#dc2626">Proven On Results.</span></h2>
+    </div>
+    <div class="stats-row reveal">
+      <div class="stat-big"><div class="n" data-count="500" data-suffix="+">0+</div><div class="l">Happy Clients</div></div>
+      <div class="stat-big"><div class="n" data-count="98" data-suffix="%">0%</div><div class="l">Satisfaction Rate</div></div>
+      <div class="stat-big"><div class="n" data-count="5" data-suffix="★" data-dec="1">0★</div><div class="l">Rating</div></div>
+      <div class="stat-big"><div class="n" data-count="6" data-suffix="+">0+</div><div class="l">Years Serving SLC</div></div>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar"><div class="ico">🧠</div><h3>Trained &amp; Experienced</h3><p>Every team member is background-checked and specialty trained — homes, clinics, kitchens, and construction sites each demand different skills, and we bring them.</p></div>
+      <div class="pillar"><div class="ico">🌿</div><h3>Eco-Conscious</h3><p>EPA-certified green cleaning on every service. Safe for kids, pets, and allergy-sensitive households — without sacrificing results.</p></div>
+      <div class="pillar"><div class="ico">📅</div><h3>Flexible Scheduling</h3><p>Same-week openings, after-hours commercial slots, and recurring plans that fit your calendar — not the other way around.</p></div>
+      <div class="pillar"><div class="ico">🛡</div><h3>Insured &amp; Guaranteed</h3><p>Licensed, bonded, and backed by our free re-clean promise. If it's not right, we come back and make it right. Simple as that.</p></div>
+    </div>
+    <div class="owner reveal">
+      <blockquote>"We built No Sweat on one belief: your home and business deserve the same care we'd give our own. We're a local SLC family — and every job has our name on it."</blockquote>
+      <cite>— The No Sweat Cleaning Team · Salt Lake City, Utah</cite>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sect reviews" id="reviews">
+  <div class="sect-in">
+    <div class="reveal" style="text-align:center">
+      <div class="eyebrow">Field Reports</div>
+      <h2 class="sect-h2">What The Valley Says</h2>
+    </div>
+    <div class="t-card reveal" id="testimonialCard"></div>
+    <div class="car-nav">
+      <button class="arrow" onclick="prevTest()">&#8249;</button>
+      <div class="dotbar" id="dotbar"></div>
+      <button class="arrow" onclick="nextTest()">&#8250;</button>
+    </div>
+  </div>
+</section>
+
+<!-- ESTIMATE -->
+<section class="sect estimate" id="estimate">
+  <div class="sect-in">
+    <div class="reveal" style="text-align:center">
+      <div class="eyebrow">Know Before You Book</div>
+      <h2 class="sect-h2">Instant Estimate <span style="color:#dc2626">Calculator</span></h2>
+      <p class="sect-sub" style="margin:12px auto 0">Standard home cleaning, priced in seconds. Pick your size, add your options — total updates live.</p>
+    </div>
+    <div class="calc-card reveal">
+      <div class="f-grid">
+        <div class="field"><label>Your Name <em>*</em></label><input type="text" id="calcName" placeholder="Your full name"/></div>
+        <div class="field"><label>Call-back Phone <em>*</em></label><input type="tel" id="calcPhone" placeholder="385-228-9322"/></div>
+        <div class="field"><label>Preferred Date</label><input type="date" id="calcDate"/></div>
+        <div class="field">
+          <label>Home Size</label>
+          <select id="calcSize" onchange="updateCalc()">
+            <option value="120">1 Bedroom ($120)</option>
+            <option value="150">2 Bedrooms ($150)</option>
+            <option value="180">3 Bedrooms ($180)</option>
+            <option value="220">4+ Bedrooms ($220)</option>
+          </select>
         </div>
-    </section>
-    <section id="guarantee" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="guarantee-badge p-10 md:p-20 shadow-2xl rounded-sm">
-                <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <div class="shrink-0">
-                        <div class="w-24 h-24 bg-red-600 flex items-center justify-center rounded-full shadow-lg shadow-red-900/20">
-                            <i class="fas fa-shield-alt text-white text-4xl"></i>
-                        </div>
-                    </div>
-                    <div class="text-center lg:text-left">
-                        <h2 class="text-white text-3xl md:text-5xl font-black mb-4 italic uppercase">"No Sweat, Just Clean"</h2>
-                        <div class="h-1 w-20 bg-red-600 mb-6 mx-auto lg:mx-0"></div>
-                        <p class="text-gray-300 text-lg md:text-xl font-medium leading-relaxed max-w-3xl">
-                            Our standard is perfection. We provide high-efficiency cleaning that eliminates the stress of maintenance. If you aren't completely satisfied with our performance, we'll return immediately to make it right.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div class="field full" style="gap:9px">
+          <label>Premium Add-Ons</label>
+          <label class="opt-row"><input type="checkbox" id="calcPet" onchange="updateCalc()"/><span>Pet Hair Deep Treatment</span><span class="add">+$30</span></label>
+          <label class="opt-row"><input type="checkbox" id="calcEco" onchange="updateCalc()"/><span>Eco-Friendly Products</span><span class="add">+10%</span></label>
+          <label class="opt-row"><input type="checkbox" id="calcPri" onchange="updateCalc()"/><span>Priority Scheduling</span><span class="add">+$50</span></label>
         </div>
-    </section>
-    <section id="services" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-                <div>
-                    <h2 class="text-4xl font-black text-gray-900 mb-2 uppercase">Core Capabilities</h2>
-                    <div class="w-16 h-2 bg-red-600"></div>
-                </div>
-                <p class="text-gray-500 font-bold uppercase text-xs tracking-[0.3em]">Professional • Affordable • Fast</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="service-card bg-gray-50 p-10 rounded-sm">
-                    <div class="w-12 h-12 bg-white flex items-center justify-center mb-8 shadow-sm">
-                        <i class="fas fa-home text-red-600 text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-black text-gray-900 mb-4">Residential</h3>
-                    <p class="text-gray-500 font-medium mb-8 leading-relaxed">Precision cleaning for apartments, homes, and luxury estates. High-efficiency workflows designed to respect your schedule.</p>
-                    <ul class="space-y-3 text-[10px] font-black uppercase tracking-widest text-slate-400">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-red-600"></i> Deep Sanitization</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-red-600"></i> Move-In/Out Specialists</li>
-                    </ul>
-                </div>
-                <div class="service-card bg-gray-50 p-10 rounded-sm">
-                    <div class="w-12 h-12 bg-white flex items-center justify-center mb-8 shadow-sm">
-                        <i class="fas fa-briefcase text-red-600 text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-black text-gray-900 mb-4">Commercial</h3>
-                    <p class="text-gray-500 font-medium mb-8 leading-relaxed">Office, retail, and industrial maintenance. Designed for businesses that need absolute hygiene with minimal down-time.</p>
-                    <ul class="space-y-3 text-[10px] font-black uppercase tracking-widest text-slate-400">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-red-600"></i> Corporate HQ Cleaning</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-red-600"></i> Post-Construction Sites</li>
-                    </ul>
-                </div>
-                <div class="service-card bg-gray-900 p-10 rounded-sm text-white">
-                    <div class="w-12 h-12 bg-red-600 flex items-center justify-center mb-8 shadow-sm">
-                        <i class="fas fa-bolt text-white text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-black mb-4">Immediate Response</h3>
-                    <p class="text-gray-400 font-medium mb-8 leading-relaxed">Emergency cleanup and holiday servicing. Our dispatch operations are active 24/7/365 across all Utah counties.</p>
-                    <ul class="space-y-3 text-[10px] font-black uppercase tracking-widest text-red-500">
-                        <li class="flex items-center gap-2"><i class="fas fa-check"></i> 2-Hour Dispatch Target</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check"></i> Weekend/Holiday Active</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="calc-total field full">
+          <div class="lbl">Your Estimate</div>
+          <div class="amt"><em>$</em><span id="calcTotal">120.00</span></div>
         </div>
-    </section>
-    <section id="book" class="py-24 bg-gray-900 relative">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-white text-4xl font-black mb-4 uppercase">Secure A Quote</h2>
-                <p class="text-gray-400 font-bold uppercase text-[10px] tracking-[0.4em]">Utah Operations Dispatch Active</p>
-            </div>
-            <form id="contactForm" action="https://formsubmit.co/sweatjasmine125@gmail.com" method="POST" class="bg-white p-8 md:p-14 shadow-2xl rounded-sm border-t-8 border-red-600">
-                <input type="hidden" name="_subject" value="🚨 NEW QUOTE REQUEST - No Sweat Cleaning">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="https://formsubmit.co/thanks">
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div class="space-y-2">
-                        <label class="text-[10px] font-black uppercase tracking-widest text-gray-400">Client Name *</label>
-                        <input type="text" name="Client Name" class="w-full bg-gray-50 border border-gray-200 p-4 outline-none focus:border-red-600 transition" placeholder="Full Name" required>
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-[10px] font-black uppercase tracking-widest text-gray-400">Call-back Phone *</label>
-                        <input type="tel" name="Phone Number" class="w-full bg-gray-50 border border-gray-200 p-4 outline-none focus:border-red-600 transition" placeholder="385-228-9322" required>
-                    </div>
-                </div>
-                <div class="grid md:grid-cols-2 gap-8 mb-8">
-                    <div class="space-y-2">
-                        <label class="text-[10px] font-black uppercase tracking-widest text-gray-400">Service Location (City/County) *</label>
-                        <input type="text" name="Service Location" class="w-full bg-gray-50 border border-gray-200 p-4 outline-none focus:border-red-600 transition" placeholder="e.g. Salt Lake City" required>
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-[10px] font-black uppercase tracking-widest text-gray-400">Cleaning Type</label>
-                        <select name="Cleaning Type" class="w-full bg-gray-50 border border-gray-200 p-4 outline-none focus:border-red-600 transition">
-                            <option value="Residential Standard">Residential Standard</option>
-                            <option value="Residential Deep Clean">Residential Deep Clean</option>
-                            <option value="Commercial / Office">Commercial / Office Space</option>
-                            <option value="Move In / Move Out">Move In / Move Out</option>
-                            <option value="Emergency Response">Emergency Cleanup</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="mb-8 space-y-2">
-                    <label class="text-[10px] font-black uppercase tracking-widest text-gray-400">Tell us about your cleaning needs (Optional)</label>
-                    <textarea name="Special Instructions" rows="4" class="w-full bg-gray-50 border border-gray-200 p-4 outline-none focus:border-red-600 transition" placeholder="e.g. 3 Bedroom home, needs pet odor sanitization..."></textarea>
-                </div>
-                <button type="submit" class="w-full btn-red py-6 font-black text-sm uppercase tracking-[0.3em]">
-                    Submit Dispatch Request
-                </button>
-            </form>
+        <div id="calcMsg" class="field full" style="display:none"></div>
+        <button class="submit-btn field full" id="calcBtn" onclick="submitCalc()">Lock In My Estimate</button>
+        <div class="calc-note field full">Standard home cleaning only. Deep cleans, commercial &amp; power washing get a custom quote below or call <a href="tel:3852289322" style="color:#dc2626;font-weight:700">385-228-9322</a>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="sect book" id="book">
+  <div class="sect-in">
+    <div class="reveal" style="text-align:center">
+      <div class="eyebrow">Request Dispatch</div>
+      <h2 class="sect-h2">Get Your Free Quote</h2>
+      <p class="sect-sub" style="margin:12px auto 0;color:#9ca3af">Tell us about the job and we'll call back fast. Prefer to talk? Call or text <a href="tel:3852289322" style="color:#dc2626;font-weight:700">385-228-9322</a> any hour, any day.</p>
+    </div>
+    <div class="form-card reveal">
+      <div class="f-grid">
+        <div class="field"><label>Client Name <em>*</em></label><input type="text" id="qName" placeholder="Your full name"/></div>
+        <div class="field"><label>Call-back Phone <em>*</em></label><input type="tel" id="qPhone" placeholder="385-228-9322"/></div>
+        <div class="field"><label>Email Address</label><input type="email" id="qEmail" placeholder="you@email.com"/></div>
+        <div class="field"><label>City / Area <em>*</em></label><input type="text" id="qCity" placeholder="e.g. Salt Lake City"/></div>
+        <div class="field">
+          <label>Cleaning Type</label>
+          <select id="qService">
+            <option value="">Select a service…</option>
+            <optgroup label="Residential">
+              <option>Residential — Standard Home Cleaning</option>
+              <option>Residential — Deep Clean</option>
+              <option>Residential — Recurring Plan</option>
+              <option>Residential — Move-In / Move-Out</option>
+              <option>Residential — Post-Event Cleanup</option>
+              <option>Residential — Eco-Friendly Green Clean</option>
+            </optgroup>
+            <optgroup label="Commercial">
+              <option>Commercial — Office &amp; Corporate</option>
+              <option>Commercial — Retail &amp; Storefront</option>
+              <option>Commercial — Medical &amp; Clinical</option>
+              <option>Commercial — Restaurant &amp; Food Service</option>
+              <option>Commercial — Airbnb &amp; Short-Term Rental</option>
+              <option>Commercial — Gym &amp; Fitness Center</option>
+              <option>Commercial — School &amp; Daycare</option>
+              <option>Commercial — Hotel &amp; Hospitality</option>
+            </optgroup>
+            <optgroup label="Power Washing">
+              <option>Power Washing — Driveways &amp; Concrete</option>
+              <option>Power Washing — Decks &amp; Patios</option>
+              <option>Power Washing — Building Exterior</option>
+              <option>Power Washing — Roof Soft Wash</option>
+              <option>Power Washing — Fences &amp; Walls</option>
+              <option>Power Washing — Vehicles &amp; Fleet</option>
+            </optgroup>
+            <optgroup label="Specialty">
+              <option>Specialty — Construction Cleanup</option>
+              <option>Specialty — Post-Renovation Cleanup</option>
+              <option>Specialty — Hoarding / Extreme Cleanup</option>
+            </optgroup>
+          </select>
         </div>
-    </section>
-    <footer class="bg-black text-white py-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-10">
-                <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 bg-white flex items-center justify-center rounded-sm">
-                        <i class="fas fa-shield-alt text-red-600 text-xl"></i>
-                    </div>
-                    <div>
-                        <div class="text-lg font-black leading-none">NO SWEAT</div>
-                        <div class="text-[7px] font-bold text-gray-500 tracking-[0.4em] uppercase">Cleaning Professionals</div>
-                    </div>
-                </div>
-                <div class="flex flex-col sm:flex-row items-center gap-8 font-black text-[10px] uppercase tracking-widest text-center">
-                    <a href="tel:3852289322" class="hover:text-red-500 transition"><i class="fas fa-phone mr-1"></i> 385-228-9322</a>
-                    <a href="mailto:sweatjasmine125@gmail.com" class="hover:text-red-500 transition lowercase"><i class="fas fa-envelope mr-1"></i> sweatjasmine125@gmail.com</a>
-                </div>
-                <div class="text-[8px] font-bold text-gray-600 uppercase tracking-widest">
-                    &copy; 2026 No Sweat Cleaning Professionals • Statewide Utah Operations
-                </div>
-            </div>
+        <div class="field">
+          <label>Property Size</label>
+          <select id="qSize">
+            <option value="">Select size…</option>
+            <option>Studio / 1 Bedroom</option><option>2 Bedroom</option>
+            <option>3 Bedroom</option><option>4 Bedroom</option><option>5+ Bedroom</option>
+            <option>Commercial — Small</option><option>Commercial — Medium</option><option>Commercial — Large</option>
+          </select>
         </div>
-    </footer>
+        <div class="field"><label>Preferred Date</label><input type="date" id="qDate"/></div>
+        <div class="field full"><label>Special Instructions / Notes</label><textarea id="qNotes" placeholder="Pets, parking, gate codes, problem areas — anything we should know."></textarea></div>
+        <div id="quoteMsg" class="field full" style="display:none"></div>
+        <button class="submit-btn" id="quoteBtn" onclick="submitQuote()">Submit Dispatch Request</button>
+        <div class="form-note field full">Delivered straight to our dispatch inbox · Response within hours, 24/7/365</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="foot-in">
+    <a href="#home" class="logo">
+      <span class="logo-mark" style="background:#1f2937">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 5.5V11c0 5.2 3.4 9.4 8 11 4.6-1.6 8-5.8 8-11V5.5L12 2z" fill="#dc2626"/><path d="M9 12l2.2 2.2L15.5 9.7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="logo-word"><div class="top" style="color:#fff">NO SWEAT</div><div class="bot" style="color:#9ca3af">Cleaning Professionals</div></span>
+    </a>
+    <div class="foot-mid">
+      <a href="tel:3852289322">📞 385-228-9322</a>
+      <a href="mailto:sweatjasmine125@gmail.com">✉ sweatjasmine125@gmail.com</a>
+    </div>
+    <div class="foot-right">© 2026 No Sweat Cleaning Professionals · Statewide Utah Operations</div>
+  </div>
+</footer>
+
+<!-- NOVA CHAT -->
+<div class="nova-win hidden" id="novaWin">
+  <div class="nova-head">
+    <div><div class="nt">Nova · No Sweat Guide</div><div class="ns">Online — Ask me anything</div></div>
+    <button class="nova-close-btn" onclick="toggleChat()">×</button>
+  </div>
+  <div class="nova-msgs" id="novaMsgs"></div>
+  <div class="chips-row" id="novaChips"></div>
+  <div class="nova-input-row">
+    <input type="text" id="novaInput" placeholder="Type a message…" onkeydown="if(event.key==='Enter')novaReply()"/>
+    <button class="nova-send-btn" onclick="novaReply()">Send</button>
+  </div>
+</div>
+<button class="nova-fab pulse" id="novaFab" onclick="toggleChat()">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4c-1.2 0-2.4-.2-3.4-.7L3 21l1.8-5.3a8.2 8.2 0 0 1-1.3-4.2A8.4 8.4 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4z" fill="#fff"/><circle cx="8.6" cy="11.5" r="1.1" fill="#dc2626"/><circle cx="12.5" cy="11.5" r="1.1" fill="#dc2626"/><circle cx="16.4" cy="11.5" r="1.1" fill="#dc2626"/></svg>
+  <span class="nova-badge" id="novaBadge">1</span>
+</button>
+
+<script>
+/* ── SERVICES DATA ── */
+const SERVICES = {
+  Residential:[
+    {title:"Standard Home Cleaning",badge:"Most Popular",price:"$120–$250",dur:"2–4 hrs",desc:"Our signature whole-home reset. Every room handled with the same precision, every visit.",inc:["Kitchen: countertops, sink, stovetop, microwave interior, appliance exteriors","Bathrooms: toilet, tub, shower, vanity, mirrors, floors fully sanitized","All rooms: surfaces dusted, ceiling fans, blinds, window sills","Floors vacuumed and mopped, trash emptied, beds made, glass cleaned"]},
+    {title:"Deep Clean",badge:"Top Rated",price:"$200–$450",dur:"4–8 hrs",desc:"We go where standard cleans don't. Built for first visits, seasonal resets, and homes that need a hard reset.",inc:["Everything in Standard PLUS: inside oven, fridge, dishwasher","Baseboards, door frames, outlet covers, switch plates","Inside all cabinets and drawers, grout scrubbing","Behind furniture, window tracks, air vents"]},
+    {title:"Recurring Plans",badge:"Best Value",price:"10–15% Off",dur:"Ongoing",desc:"Lock in your team, your schedule, and your discount. The home that stays clean — without you thinking about it.",inc:["Weekly, bi-weekly, or monthly options","Same consistent team assigned every visit","Priority scheduling, 10% off bi-weekly, 15% off weekly","Free re-clean guarantee, easy rescheduling"]},
+    {title:"Move-In / Move-Out",badge:"Deposit Saver",price:"$250–$600",dur:"4–10 hrs",desc:"Landlord-inspection ready. We clean to the standard your deposit depends on.",inc:["Full deep clean of entire property","All appliances inside and out, all cabinets and closets","Walls spot-washed, garage swept, final walkthrough"]},
+    {title:"Post-Event / Party Cleanup",badge:"Same Day",price:"$150–$350",dur:"2–5 hrs",desc:"Host the party. We handle the morning after — fast, thorough, gone before lunch.",inc:["Full trash and recycling removal","Kitchen sanitization, bathroom deep clean","All floors, furniture rearranged, deck/patio included"]},
+    {title:"Eco-Friendly Green Clean",badge:"Kid & Pet Safe",price:"Add 10%",dur:"Same Duration",desc:"Every service, powered by certified green products. Safe for the people and pets who live there.",inc:["EPA Safer Choice certified products","Safe for children, pets, allergy households","Microfiber system, reusable supplies"]},
+  ],
+  Commercial:[
+    {title:"Office & Corporate",badge:"After-Hours Available",price:"Custom Quote",dur:"Scheduled",desc:"Your office, reset before the first employee walks in.",inc:["Workstations and conference rooms","Break rooms and restrooms","Lobby and reception areas"]},
+    {title:"Retail & Storefront",badge:"Off-Hours",price:"Custom Quote",dur:"Scheduled",desc:"First impressions are made at the front door. We make sure yours holds up.",inc:["Display cases and fitting rooms","Glass facades and entry glass","High-traffic floor care"]},
+    {title:"Medical & Clinical",badge:"CDC Compliant",price:"Custom Quote",dur:"Scheduled",desc:"Clinical-grade cleaning with clinical-grade discretion.",inc:["CDC guideline compliance","Hospital-grade EPA disinfectants","HIPAA-conscious protocols"]},
+    {title:"Restaurant & Food Service",badge:"Health Code Ready",price:"Custom Quote",dur:"Scheduled",desc:"Pass every inspection. Impress every guest.",inc:["Kitchen degreasing and hood vents","Dining room detail","Health code compliance support"]},
+    {title:"Airbnb & Short-Term Rentals",badge:"5-Star Results",price:"Flat Rate Per Turn",dur:"Same Day",desc:"Turnovers that protect your rating — same day, every time.",inc:["Same-day turnovers","Linen changes and restocking","Photo-ready staging, host integration"]},
+    {title:"Gyms & Fitness Centers",badge:"Daily+",price:"Custom Quote",dur:"Daily Options",desc:"Members notice clean equipment. They really notice when it isn't.",inc:["Equipment disinfection","Locker rooms and showers","Odor treatment"]},
+    {title:"Schools & Daycares",badge:"Child Safe",price:"Custom Quote",dur:"Scheduled",desc:"Safe products, spotless classrooms, peace of mind for parents.",inc:["Child-safe products only","Classrooms and cafeteria","Weekend deep cleans"]},
+    {title:"Hotels & Hospitality",badge:"Guest Ready",price:"Custom Quote",dur:"Scheduled",desc:"Every room guest-ready, every common area photo-ready.",inc:["Room turnovers","Linen coordination","Common areas and seasonal deep cleans"]},
+  ],
+  "Power Washing":[
+    {title:"Driveways & Concrete",badge:"Oil Stain Specialists",price:"$0.10–$0.25/sq ft",dur:"1–3 hrs",desc:"Years of grime, gone in an afternoon.",inc:["Concrete, asphalt, sidewalks","Oil and stain removal","Pre-seal preparation"]},
+    {title:"Decks & Patios",badge:"Spring & Fall",price:"$0.20–$0.40/sq ft",dur:"1–4 hrs",desc:"Get your outdoor space ready for the season — safely, for every surface.",inc:["Wood, composite, and concrete","Mold and algae removal","Pre-stain preparation"]},
+    {title:"Building Exterior",badge:"Curb Appeal",price:"Custom Quote",dur:"Scheduled",desc:"Your building's first impression, restored.",inc:["Vinyl, brick, and stucco","Multi-story capable","Gutters, fascia, soffits"]},
+    {title:"Roof Soft Wash",badge:"Shingle Safe",price:"Custom Quote",dur:"Scheduled",desc:"Low-pressure only. Tough on moss, gentle on shingles.",inc:["Algae, moss, and lichen removal","Low-pressure soft wash only","Gutters included"]},
+    {title:"Fences & Walls",badge:"Graffiti Removal",price:"$0.50–$1.50/linear ft",dur:"Scheduled",desc:"Property lines that look as sharp as the property.",inc:["Wood, vinyl, chain-link","Retaining walls","Graffiti treatment"]},
+    {title:"Vehicles & Fleet",badge:"Fleet Discounts",price:"Per Vehicle",dur:"Scheduled",desc:"From a single RV to your whole fleet — volume pricing available.",inc:["Undercarriage washing","Vans, RVs, equipment","Fleet volume pricing"]},
+  ],
+  Specialty:[
+    {title:"Construction Cleanup",badge:"GC Trusted",price:"Custom Quote (sq ft)",dur:"Rough-In & Final",desc:"From punch list to handover, we make the build shine. Both rough-in and final stage available.",inc:["Post-build dust elimination","Window sticker and paint drip removal","Grout haze removal and final polish","Rough-in and final stage service"]},
+    {title:"Post-Renovation Cleanup",badge:"Reveal the Work",price:"Custom Quote",dur:"Scheduled",desc:"Your remodel deserves a reveal, not a layer of drywall dust.",inc:["Drywall dust removal","Floor polishing and grout haze","New cabinet interiors detailed"]},
+    {title:"Hoarding / Extreme Cleanup",badge:"Compassionate",price:"Call for Assessment",dur:"Multi-Day",desc:"Judgment-free, confidential help — at whatever pace the situation needs.",inc:["Judgment-free, fully confidential","Multi-day project capability","Debris removal coordination"]},
+  ],
+};
+
+const CITIES=["Salt Lake City","South Jordan","West Jordan","Sandy","Murray","Riverton","Draper","Herriman","Taylorsville","Millcreek","Holladay","Cottonwood Heights","Bluffdale","West Valley City","Midvale","Lehi","+ All Surrounding Areas"];
+
+const TESTIMONIALS=[
+  {who:"Sarah M., South Jordan",svc:"Move-Out Clean",quote:"Got my full deposit back — the landlord was shocked. Worth every penny."},
+  {who:"Marcus T., West Jordan",svc:"Weekly Office Service",quote:"Our clients comment on how professional our office looks. I never think about it — which is exactly the point."},
+  {who:"Jennifer K., Downtown SLC",svc:"Airbnb Turnovers",quote:"My rating went from 4.6 to 4.9 stars after I hired them. Same-day turnovers, flawlessly done."},
+  {who:"David R., Sandy",svc:"Deep Clean",quote:"My wife cried happy tears. We book them quarterly without question."},
+  {who:"Amanda L., Draper",svc:"Construction Cleanup",quote:"After our remodel the dust was everywhere. You'd never know a renovation happened."},
+  {who:"Chris P., Murray",svc:"Power Washing",quote:"12 years of oil stains — gone after one session. Looks brand new."},
+];
+
+/* ── NOVA CHAT TREE ── */
+const NOVA_TREE = {
+  start:{msg:"Hi! 👋 I'm Nova, the No Sweat Cleaning guide. What brings you here today?",chips:["🏠 Residential","🏢 Commercial","💦 Power Washing","⭐ Specialty Services","💰 Pricing Info","📞 Call / Contact"]},
+  "🏠 Residential":{msg:"We offer 6 residential services! What best fits your situation?",chips:["Standard Clean ($120–250)","Deep Clean ($200–450)","Recurring Plan (save 10–15%)","Move-In / Move-Out ($250–600)","Post-Event Cleanup ($150–350)","Eco-Friendly Green Clean","← Main Menu"]},
+  "Standard Clean ($120–250)":{msg:"Perfect for regular maintenance! Our Standard Clean covers every room — kitchen, bathrooms, floors, dusting, and more. Takes 2–4 hours. Ready to get a quote?",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "Deep Clean ($200–450)":{msg:"Our Deep Clean goes everywhere a standard clean doesn't — inside appliances, baseboards, grout scrubbing, behind furniture. Perfect for first visits or seasonal resets. 4–8 hours.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "Recurring Plan (save 10–15%)":{msg:"Lock in your team and your schedule — same crew every time. Weekly saves 15%, bi-weekly saves 10%. Priority scheduling and a free re-clean guarantee included.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "Move-In / Move-Out ($250–600)":{msg:"We clean to landlord-inspection standard — all appliances inside/out, every cabinet and closet, walls spot-washed, garage included. Great for getting your deposit back.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "Post-Event Cleanup ($150–350)":{msg:"Host the party — we handle the morning after! Full trash removal, kitchen and bathroom sanitization, all floors, and furniture rearranged. Same-day service available.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "Eco-Friendly Green Clean":{msg:"We use EPA Safer Choice certified products — non-toxic, biodegradable, safe for kids, pets, and allergy households. Add it to any service for +10%. Zero compromise on clean.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "🏢 Commercial":{msg:"We serve businesses of all types! Which best describes your space?",chips:["Office / Corporate","Retail / Storefront","Medical / Clinical","Restaurant / Food Service","Airbnb / Short-Term Rental","Gym / Fitness Center","School / Daycare","Hotel / Hospitality","← Main Menu"]},
+  "Office / Corporate":{msg:"We reset your office before your team arrives — workstations, conference rooms, break rooms, restrooms, and reception. After-hours scheduling is our standard.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "Retail / Storefront":{msg:"Display cases, fitting rooms, glass facades, and high-traffic floors — all detailed to brand standard. Scheduled for off-hours so we never disrupt your customers.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "Medical / Clinical":{msg:"We follow CDC guidelines and use hospital-grade EPA-registered disinfectants. HIPAA-conscious protocols, full documentation available. Built for healthcare environments.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "Restaurant / Food Service":{msg:"Health code compliant kitchen degreasing, hood vents, dining rooms, and restrooms. Pre-open or post-close scheduling — we work around your operation.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "Airbnb / Short-Term Rental":{msg:"Same-day turnovers that protect your rating. Full clean, linen changes, restocking, and photo-ready staging. We integrate with your host scheduling.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "Gym / Fitness Center":{msg:"Full equipment disinfection, locker rooms, odor treatment, and all floor types. Early morning or late-night scheduling available for zero disruption to members.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "School / Daycare":{msg:"Child-safe non-toxic products exclusively. Classrooms, cafeteria, restrooms, and hallways. Weekend deep cleans to keep your facility spotless for Monday.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "Hotel / Hospitality":{msg:"Room turnovers, linen coordination, common areas, lobby, and event spaces — all handled to guest-ready standard. Schedule built around your occupancy calendar.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "💦 Power Washing":{msg:"We pressure wash everything! What needs cleaning?",chips:["Driveways & Concrete","Decks & Patios","Building Exterior","Roof Soft Wash","Fences & Walls","Vehicles & Fleet","← Main Menu"]},
+  "Driveways & Concrete":{msg:"Oil stains, tire marks, years of grime — we remove it all. Concrete and asphalt driveways, sidewalks, and curbs. Priced at $0.10–$0.25/sq ft. Pre-seal prep included.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "Decks & Patios":{msg:"Wood, composite, or concrete — we remove mold, mildew, and algae. Pre-stain and pre-seal prep available. $0.20–$0.40/sq ft. Spring and fall are our busiest seasons!",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "Building Exterior":{msg:"Vinyl siding, brick, stucco — multi-story capable. Gutter exteriors, fascia, and soffits included. Custom quote based on building size.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "Roof Soft Wash":{msg:"Low-pressure soft wash only — zero risk to your shingles, won't void warranties. Eliminates algae, moss, and lichen. Gutter cleaning included with every roof wash.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "Fences & Walls":{msg:"Wood, vinyl, chain-link, retaining walls, and block walls. Graffiti removal with specialized treatment — no trace left behind. Priced at $0.50–$1.50/linear ft.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "Vehicles & Fleet":{msg:"Exterior body wash, undercarriage pressure wash, RVs, cargo vans, trailers, and heavy equipment. Volume fleet discounts available for 3+ vehicles.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "⭐ Specialty Services":{msg:"Our specialty division handles the jobs most cleaners won't. What do you need?",chips:["Construction Cleanup","Post-Renovation Cleanup","Hoarding / Extreme Cleanup","← Main Menu"]},
+  "Construction Cleanup":{msg:"Post-build dust elimination, window sticker removal, paint drips, grout haze, and final polish. We cover both the rough-in stage and the final handover — custom quoted by square footage.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "Post-Renovation Cleanup":{msg:"Drywall dust gets into everything. We remove it from every surface, polish new floors, remove grout haze, and detail every new cabinet interior. Your remodel finally gets its reveal.",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Back"]},
+  "Hoarding / Extreme Cleanup":{msg:"Compassionate, judgment-free, and fully confidential. Our specially trained team works at whatever pace the situation needs — multi-day projects are no problem. Please call for a private assessment.",chips:["📞 Call 385-228-9322","📋 Get a Free Quote","← Back"]},
+  "💰 Pricing Info":{msg:"Here's a quick overview:\n\n🏠 Standard Home: $120–$250\n✨ Deep Clean: $200–$450\n📦 Move-In/Out: $250–$600\n🎉 Post-Event: $150–$350\n💦 Driveways: $0.10–$0.25/sq ft\n🏢 Commercial: Custom quote\n\nUse our Estimate Calculator above for an instant residential quote!",chips:["📋 Get a Free Quote","📞 Call 385-228-9322","← Main Menu"]},
+  "📞 Call / Contact":{msg:"We're available 24/7/365!\n\n📞 Call or Text: 385-228-9322\n✉️ Email: sweatjasmine125@gmail.com\n\nOr fill out the quote form on this page and we'll call you back fast.",chips:["📋 Get a Free Quote","← Main Menu"]},
+  "📋 Get a Free Quote":{msg:"Scroll down to our quote form and fill it out — we'll call you back within hours! Or call us directly at 385-228-9322 any time.",chips:["← Main Menu"]},
+  "📞 Call 385-228-9322":{msg:"Give us a call or text at 385-228-9322 — we're available 24/7. We'll get you a fast, honest quote.",chips:["← Main Menu"]},
+  "← Back":{msg:"No problem! What else can I help you with?",chips:["🏠 Residential","🏢 Commercial","💦 Power Washing","⭐ Specialty Services","💰 Pricing Info","📞 Call / Contact"]},
+  "← Main Menu":{msg:"Of course! What can I help you with?",chips:["🏠 Residential","🏢 Commercial","💦 Power Washing","⭐ Specialty Services","💰 Pricing Info","📞 Call / Contact"]},
+};
+
+/* ── INIT ── */
+let activeTab = 'Residential';
+let testIdx = 0;
+let testTimer;
+let chatOpen = false;
+let chatUnread = true;
+
+document.addEventListener('DOMContentLoaded', () => {
+  buildParticles();
+  renderServices('Residential');
+  buildCityChips();
+  renderTestimonial();
+  buildDots();
+  startTestTimer();
+  initScrollReveal();
+  initCounters();
+  initNav();
+  initParallax();
+  novaInit();
+  document.getElementById('hamBtn').onclick = () => document.getElementById('mobMenu').classList.add('open');
+  document.getElementById('mobClose').onclick = closeMob;
+});
+
+function closeMob(){ document.getElementById('mobMenu').classList.remove('open'); }
+
+/* ── NAV ── */
+function initNav(){
+  window.addEventListener('scroll', () => {
+    document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 24);
+  }, {passive:true});
+}
+
+/* ── PARTICLES ── */
+function buildParticles(){
+  const c = document.getElementById('particles');
+  for(let i=0;i<40;i++){
+    const p = document.createElement('span');
+    p.className = 'particle';
+    const s = 4 + Math.random()*9;
+    Object.assign(p.style,{
+      left: Math.random()*100+'%',
+      top: (20+Math.random()*75)+'%',
+      width: s+'px', height: s+'px',
+      animationDuration: (7+Math.random()*10)+'s',
+      animationDelay: -(Math.random()*12)+'s',
+      opacity: .4+Math.random()*.5
+    });
+    c.appendChild(p);
+  }
+}
+
+/* ── PARALLAX ── */
+function initParallax(){
+  const hero = document.querySelector('.hero');
+  const dots = document.getElementById('heroDots');
+  const rA = document.getElementById('ringA');
+  const rB = document.getElementById('ringB');
+  const parts = document.getElementById('particles');
+  const stats = document.getElementById('heroStats');
+  hero.addEventListener('mousemove', e => {
+    const r = hero.getBoundingClientRect();
+    const x = (e.clientX-r.left)/r.width-.5;
+    const y = (e.clientY-r.top)/r.height-.5;
+    dots.style.transform = `translate(${x*6}px,${y*6}px)`;
+    rA.style.transform = `translate(${x*10}px,${y*10}px) rotate(0deg)`;
+    rB.style.transform = `translate(${x*14}px,${y*14}px) rotate(0deg)`;
+    parts.style.transform = `translate(${x*22}px,${y*22}px)`;
+    stats.style.transform = `translate(${x*28}px,${y*28}px)`;
+  });
+}
+
+/* ── SERVICES ── */
+function switchTab(name, btn){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderServices(name);
+}
+
+function renderServices(name){
+  activeTab = name;
+  const grid = document.getElementById('svcGrid');
+  grid.innerHTML = SERVICES[name].map((s,i) => `
+    <div class="svc-card reveal revealed" style="animation-delay:${i*.07}s" onmousemove="tilt(event,this)" onmouseleave="untilt(this)">
+      <div class="svc-top"><h3>${s.title}</h3><span class="svc-badge">${s.badge}</span></div>
+      <div class="svc-meta"><span class="price">${s.price}</span><span>·</span><span>${s.dur}</span></div>
+      <p class="svc-desc">${s.desc}</p>
+      <button class="svc-toggle" onclick="toggleInc(this)">+ See what's included</button>
+      <ul class="svc-includes">${s.inc.map(x=>`<li>${x}</li>`).join('')}</ul>
+      <div class="svc-cta"><a href="#book">Get Quote</a></div>
+    </div>`).join('');
+}
+
+function toggleInc(btn){
+  const ul = btn.nextElementSibling;
+  const open = ul.style.display === 'block';
+  ul.style.display = open ? 'none' : 'block';
+  btn.textContent = open ? '+ See what\'s included' : '− Hide what\'s included';
+}
+
+function tilt(e, el){
+  const r = el.getBoundingClientRect();
+  const x = (e.clientX-r.left)/r.width-.5;
+  const y = (e.clientY-r.top)/r.height-.5;
+  el.style.transform = `perspective(800px) rotateX(${(-y*7).toFixed(1)}deg) rotateY(${(x*7).toFixed(1)}deg) translateZ(4px)`;
+}
+function untilt(el){ el.style.transform = 'perspective(800px) rotateX(0) rotateY(0)'; }
+
+/* ── CITY CHIPS ── */
+function buildCityChips(){
+  document.getElementById('cityChips').innerHTML = CITIES.map(c=>`<span class="chip">${c}</span>`).join('');
+}
+
+/* ── SCROLL REVEAL ── */
+function initScrollReveal(){
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+}
+
+/* ── COUNTERS ── */
+function initCounters(){
+  const els = document.querySelectorAll('.n[data-count]');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(!e.isIntersecting) return;
+      const el = e.target;
+      const end = +el.dataset.count;
+      const suf = el.dataset.suffix||'';
+      const dec = +(el.dataset.dec||0);
+      obs.unobserve(el);
+      const t0 = performance.now();
+      const dur = 1800;
+      const tick = now => {
+        const p = Math.min((now-t0)/dur,1);
+        const ease = 1-Math.pow(1-p,3);
+        el.innerHTML = (end*ease).toFixed(dec) + `<em>${suf}</em>`;
+        if(p<1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  },{threshold:.4});
+  els.forEach(el=>obs.observe(el));
+}
+
+/* ── TESTIMONIALS ── */
+function renderTestimonial(){
+  const t = TESTIMONIALS[testIdx];
+  document.getElementById('testimonialCard').innerHTML = `
+    <div class="t-stars">★★★★★</div>
+    <p class="t-quote">"${t.quote}"</p>
+    <div class="t-who">${t.who}</div>
+    <div class="t-svc">${t.svc}</div>`;
+  document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on',i===testIdx));
+}
+function buildDots(){
+  document.getElementById('dotbar').innerHTML = TESTIMONIALS.map((_,i)=>`<button class="dot" onclick="goTest(${i})"></button>`).join('');
+}
+function goTest(i){ testIdx=i; renderTestimonial(); resetTestTimer(); }
+function prevTest(){ testIdx=(testIdx-1+TESTIMONIALS.length)%TESTIMONIALS.length; renderTestimonial(); resetTestTimer(); }
+function nextTest(){ testIdx=(testIdx+1)%TESTIMONIALS.length; renderTestimonial(); resetTestTimer(); }
+function startTestTimer(){ testTimer=setInterval(()=>{testIdx=(testIdx+1)%TESTIMONIALS.length;renderTestimonial();},5000); }
+function resetTestTimer(){ clearInterval(testTimer); startTestTimer(); }
+
+/* ── ESTIMATE CALC ── */
+function updateCalc(){
+  const base = +document.getElementById('calcSize').value || 120;
+  const eco = document.getElementById('calcEco').checked;
+  const pet = document.getElementById('calcPet').checked;
+  const pri = document.getElementById('calcPri').checked;
+  let total = base;
+  if(eco) total += base*0.1;
+  if(pet) total += 30;
+  if(pri) total += 50;
+  document.getElementById('calcTotal').textContent = total.toFixed(2);
+  document.getElementById('calcBtn').textContent = `Lock In My $${total.toFixed(2)} Estimate`;
+}
+
+async function submitCalc(){
+  const name = document.getElementById('calcName').value.trim();
+  const phone = document.getElementById('calcPhone').value.trim();
+  const msg = document.getElementById('calcMsg');
+  if(!name||!phone){ showMsg(msg,'Please enter your name and phone number.','err'); return; }
+  const btn = document.getElementById('calcBtn');
+  btn.disabled = true; btn.textContent = 'Locking In…';
+  const total = document.getElementById('calcTotal').textContent;
+  const size = document.getElementById('calcSize');
+  try{
+    const res = await fetch('https://formsubmit.co/ajax/sweatjasmine125@gmail.com',{
+      method:'POST',
+      headers:{'Content-Type':'application/json',Accept:'application/json'},
+      body: JSON.stringify({
+        _subject:'💰 INSTANT ESTIMATE - No Sweat Cleaning',_template:'table',
+        'Client Name':name,'Phone':phone,
+        'Preferred Date':document.getElementById('calcDate').value,
+        'Home Size':size.options[size.selectedIndex].text,
+        'Eco-Friendly':document.getElementById('calcEco').checked?'Yes':'No',
+        'Pet Hair':document.getElementById('calcPet').checked?'Yes':'No',
+        'Priority':document.getElementById('calcPri').checked?'Yes':'No',
+        'Quoted Estimate':'$'+total
+      })
+    });
+    if(!res.ok) throw new Error();
+    showMsg(msg,"✓ Estimate locked in! We'll call you back to confirm your date and time.",'ok');
+    btn.textContent = '✓ Locked In!';
+  }catch{
+    showMsg(msg,'Connection issue. Call us at <a href="tel:3852289322">385-228-9322</a> and we\'ll honor this price.','err');
+    btn.disabled=false; btn.textContent=`Lock In My $${total} Estimate`;
+  }
+}
+
+/* ── QUOTE FORM ── */
+async function submitQuote(){
+  const name = document.getElementById('qName').value.trim();
+  const phone = document.getElementById('qPhone').value.trim();
+  const city = document.getElementById('qCity').value.trim();
+  const msg = document.getElementById('quoteMsg');
+  if(!name||!phone||!city){ showMsg(msg,'Please fill in your name, phone, and city.','err'); return; }
+  const btn = document.getElementById('quoteBtn');
+  btn.disabled=true; btn.textContent='Dispatching…';
+  try{
+    const res = await fetch('https://formsubmit.co/ajax/sweatjasmine125@gmail.com',{
+      method:'POST',
+      headers:{'Content-Type':'application/json',Accept:'application/json'},
+      body: JSON.stringify({
+        _subject:'🚨 NEW QUOTE REQUEST - No Sweat Cleaning',_template:'table',
+        'Client Name':name,
+        'Phone':phone,
+        'Email':document.getElementById('qEmail').value,
+        'City / Area':city,
+        'Cleaning Type':document.getElementById('qService').value,
+        'Property Size':document.getElementById('qSize').value,
+        'Preferred Date':document.getElementById('qDate').value,
+        'Notes':document.getElementById('qNotes').value
+      })
+    });
+    if(!res.ok) throw new Error();
+    showMsg(msg,"✓ Request received! We'll call you back — usually within the hour.",'ok');
+    btn.textContent='✓ Dispatched!';
+  }catch{
+    showMsg(msg,'Connection issue. Call or text us at <a href="tel:3852289322">385-228-9322</a> directly — we\'re on 24/7.','err');
+    btn.disabled=false; btn.textContent='Submit Dispatch Request';
+  }
+}
+
+function showMsg(el, text, type){
+  el.innerHTML = text;
+  el.className = 'form-msg '+type;
+  el.style.display='block';
+}
+
+/* ── NOVA SCRIPTED CHAT ── */
+function novaInit(){
+  novaAddMsg('bot',"Hi! 👋 I'm Nova, the No Sweat Cleaning guide.\n\nWhat brings you here today?");
+  novaShowChips(NOVA_TREE.start.chips);
+}
+
+function toggleChat(){
+  chatOpen = !chatOpen;
+  document.getElementById('novaWin').classList.toggle('hidden',!chatOpen);
+  if(chatOpen){ chatUnread=false; document.getElementById('novaBadge').style.display='none'; document.getElementById('novaFab').classList.remove('pulse'); }
+}
+
+function novaAddMsg(role, text){
+  const msgs = document.getElementById('novaMsgs');
+  const div = document.createElement('div');
+  div.className = 'nmsg '+role;
+  div.style.whiteSpace = 'pre-wrap';
+  div.textContent = text;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function novaShowChips(chips){
+  const row = document.getElementById('novaChips');
+  row.innerHTML = chips.map(c=>`<button class="qchip" onclick="novaClick('${c.replace(/'/g,"\\'")}')">${c}</button>`).join('');
+}
+
+function novaClick(choice){
+  novaAddMsg('user', choice);
+  document.getElementById('novaChips').innerHTML='';
+  if(choice === '📋 Get a Free Quote'){ document.getElementById('novaWin').classList.add('hidden'); chatOpen=false; document.getElementById('book').scrollIntoView({behavior:'smooth'}); return; }
+  if(choice === '📞 Call 385-228-9322'){ window.location.href='tel:3852289322'; return; }
+  setTimeout(()=>{
+    const resp = NOVA_TREE[choice] || NOVA_TREE['← Main Menu'];
+    novaAddMsg('bot', resp.msg);
+    novaShowChips(resp.chips);
+  }, 380);
+}
+
+function novaReply(){
+  const input = document.getElementById('novaInput');
+  const val = input.value.trim();
+  if(!val) return;
+  input.value='';
+  novaAddMsg('user', val);
+  document.getElementById('novaChips').innerHTML='';
+  setTimeout(()=>{
+    novaAddMsg('bot',"Thanks for your message! For the fastest response, please call or text us at 385-228-9322 — we're available 24/7. Or scroll down to fill out our free quote form and we'll call you back within the hour.");
+    novaShowChips(["📋 Get a Free Quote","📞 Call 385-228-9322","← Main Menu"]);
+  }, 450);
+}
+</script>
 </body>
 </html>
